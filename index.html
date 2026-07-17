@@ -44,9 +44,10 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:#ffffff;color:#1a1
 .card-body{padding:14px 16px 17px}
 .card-ref{font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:9px}
 .card-swatches{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px}
-.swatch{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.18);cursor:pointer;transition:.15s}
+.swatch{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.18);cursor:pointer;transition:.15s;position:relative;overflow:hidden}
 .swatch.active-filter{box-shadow:0 0 0 2px #1a1a1a;transform:scale(1.08)}
-.swatch.dim{display:none}
+.swatch.dim{opacity:.75}
+.swatch.dim::after{content:'';position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(45deg,rgba(255,255,255,.65) 0px,rgba(255,255,255,.65) 2.5px,transparent 2.5px,transparent 7px)}
 .card-tallas{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:11px}
 .card-tallas span{background:#f2f2f0;color:#666;border-radius:6px;padding:4px 11px;font-size:13px;font-weight:600;
                    cursor:pointer;transition:.15s}
